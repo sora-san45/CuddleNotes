@@ -59,7 +59,7 @@ body{
     background-color:rgb(254, 240, 223);
     border-radius: 20px;
 }
-textarea{
+.notes textarea{
     margin: 0.8rem;
     border: none;
     resize: none;
@@ -95,6 +95,27 @@ textarea{
 	border-radius:50px;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
+}
+.popup{
+    height:15rem;
+    width:20rem;
+    background-color:rgb(254, 240, 223);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    position: absolute;
+    top:10rem;
+    left:30rem;
+    visibility: hidden;
+}
+.popup textarea{
+    height:9rem;
+    width:13rem;
+    background-color:rgb(254, 240, 223);
+    resize: none;
+    border-color: rgb(250, 199, 136);;
 }
 @media(max-width:768px){
     
