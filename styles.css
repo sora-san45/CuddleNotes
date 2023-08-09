@@ -4,12 +4,31 @@
     
 }
 body{
-    background-color: bisque;
+    background-color: #ffe4c4;
 }
 .top{
     width: 120%; 
     height: 7rem; 
     background-image: url(images/bg4.jpg);
+    position: relative;
+    
+}
+.title-img{
+    position: absolute;
+    top:1rem;
+    left: 1rem;
+    background-color: #ae8368c2;
+    border-radius: 20px;
+    height:5rem;
+    width:25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top img{
+    height:3rem;
+    width:20rem;
 }
 .notes{
     margin: 3rem;
@@ -20,10 +39,11 @@ body{
 }
 .banner{
     height:4.3rem;
+    width: 12.5em;
 }
 .banner img{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
     object-fit:cover;
 }
 .note{
@@ -43,6 +63,7 @@ textarea{
     margin: 0.8rem;
     border: none;
     resize: none;
+    width:11rem;
     height: 5rem;
     background-color:rgb(254, 240, 223);
 }
@@ -75,4 +96,7 @@ textarea{
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
 }
+@media(max-width:768px){
+    
 
+}
