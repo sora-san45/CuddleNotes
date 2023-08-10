@@ -75,18 +75,13 @@ body{
     align-items: end;
     justify-content: flex-end;
 }
-.fab{
-    position:fixed;  
-    bottom:50px;  
-    right:50px;  
-    cursor:pointer;   
-}
+
 .fab{
 	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
+	width:3.6rem;
+	height:3.6rem;
+	bottom:2.3rem;
+	right:2.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,6 +90,7 @@ body{
 	border-radius:50px;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
+    cursor: pointer;
 }
 .popup{
     height:15rem;
@@ -110,6 +106,7 @@ body{
     left:30rem;
     visibility: hidden;
 }
+
 .popup textarea{
     height:9rem;
     width:13rem;
@@ -118,6 +115,7 @@ body{
     border-color: rgb(250, 199, 136);;
 }
 @media(max-width:768px){
-    
-
+    html{
+        font-size: 45%;
+    }
 }
