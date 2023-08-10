@@ -92,10 +92,23 @@ body{
 	box-shadow: 2px 2px 3px #999;
     cursor: pointer;
 }
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    visibility: hidden;
+}
 .popup{
     height:15rem;
     width:20rem;
     background-color:rgb(254, 240, 223);
+    box-shadow:  6px 6px 12px #68635c,
+    -6px -6px 12px #81786d;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,11 +121,21 @@ body{
 }
 
 .popup textarea{
+    border-radius: 20px;
     height:9rem;
     width:13rem;
     background-color:rgb(254, 240, 223);
     resize: none;
     border-color: rgb(250, 199, 136);;
+}
+.buttons{}
+.buttons button{
+    background-color:  #c09268;
+    color:white;
+    border: none;
+    height:2rem;
+    width:3rem;
+    border-radius: 10px;
 }
 @media(max-width:768px){
     html{
