@@ -7,7 +7,7 @@ body{
     background-color: #ffe4c4;
 }
 .top{
-    width: 120%; 
+    width: 150%; 
     height: 7rem; 
     background-image: url(images/bg4.jpg);
     position: relative;
@@ -138,7 +138,11 @@ body{
     border-radius: 10px;
 }
 @media(max-width:768px){
-    html{
-        font-size: 45%;
-    }
+    
+    .banner img{
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    object-fit:cover;
+}
+    
 }

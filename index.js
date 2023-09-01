@@ -7,3 +7,5 @@ function Popclose(){
     document.querySelector(".popup").style.visibility="hidden";
     document.querySelector(".overlay").style.visibility="hidden";
 }
+
+const listnotes =document.getElementsByClassName(".notes");
