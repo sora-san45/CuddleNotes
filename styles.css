@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
     padding: 0;
     margin:0;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     background-color: rgb(246, 233, 217);
@@ -29,12 +32,15 @@ body{
 
 #add-btn{
     margin: 20px auto auto 20px;
+    color:rgb(108, 88, 75);
     width:80px;
     position: sticky;
     height:30px;
     cursor: pointer;
     border-radius: 30px;
     border: none;
+    box-shadow:  6px 6px 12px #d5c8b8,
+    -6px -6px 12px #e1cdb4c0;
     background-color:rgb(195, 168, 158);
 }
 
@@ -51,6 +57,7 @@ body{
     box-shadow:  6px 6px 12px #d5c8b8,
     -6px -6px 12px #e1cdb4c0;
     border-radius: 20px;
+    
 }
 .note .note-banner{
     width: 150px;
@@ -63,13 +70,12 @@ body{
 .text{
     margin: auto 10px auto 10px;
 }
-.ops{
-    margin: 40px 20px auto auto;
-    display:flex;
-    align-items: end;
-    justify-content: flex-end;
+#delete{
+    margin: 20px 20px auto 110px;
+    cursor: pointer;
+   
 }
-.overlay{
+#overlay{
     position: fixed;
     top: 0;
     left: 0;
@@ -81,6 +87,7 @@ body{
     visibility: hidden;
 }
 #popup{
+    font-size: 15px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -98,7 +105,31 @@ body{
     visibility: hidden;
 }
 #popup textarea{
+    all: unset;
+    max-width: 150px;
+    border: solid rgb(195, 168, 158);
     resize: none;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.text{
+    font-size: 14.7px;
+}
+.buttons{
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+}
+#save, #close{
+    all: unset;
+    padding: 6px;
+    background-color: rgb(195, 168, 158);
+    border-radius: 10px;
+    color:rgb(86, 70, 60);
+}
+h3{
+    color: rgb(109, 94, 88);
 }
 @media(max-width:800px){
     #banner{

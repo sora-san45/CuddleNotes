@@ -3,6 +3,7 @@ const overlay = document.getElementById("overlay")
 const addBtn = document.getElementById("add-btn")
 const save = document.getElementById("save")
 const close = document.getElementById("close")
+const deleteBtn = document.getElementById("delete")
 const notesContainer = document.getElementById("notes-container")
 function openPopup() {
     popupBox.style.visibility = "visible"
@@ -10,6 +11,11 @@ function openPopup() {
 }
 function closePopup() {
     popupBox.style.visibility = "hidden"
+    overlay.style.visibility = "hidden"
+}
+
+function clearInputField(){
+    document.getElementById("inputField").value=""
 }
 
 addBtn.addEventListener("click", function () {
@@ -18,20 +24,25 @@ addBtn.addEventListener("click", function () {
 
 save.addEventListener("click", function () {
     const inputVal = document.getElementById("inputField").value
-    notesContainer.innerHTML += `<div class="note">
+    clearInputField()
+    closePopup()
+    if (inputVal != "") {
+        notesContainer.innerHTML += `<div class="note">
     <div class="note-banner">
         <img src="images/bg-cute.png">
     </div>
     <div class="text">
-        ${inputVal}
+        <p>${inputVal}</p>
     </div>
-    <div class="ops">
-        <i class="fa fa-trash" style="color: #c09268; font-size: 1.1rem"></i>
-    </div>
-</div>`
-    closePopup()
+    <i class="fa fa-trash" id="delete" style="color: #c09268; font-size: 1.1rem"></i>
+</div>`}
+
 })
 
 close.addEventListener("click", function () {
     closePopup()
+})
+
+notesContainer.addEventListener("click",function (){
+    notesContainer.remove("active");
 })
