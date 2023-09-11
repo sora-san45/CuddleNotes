@@ -1,51 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuddleNotes</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="top">
-        <div class="title-img">
+    <div id="banner">
+        <div class="title">
             <img src="images/title.png">
         </div>
     </div>
-    <div class="notes">
-        <div class="note">
-            <div class="banner">
-                <img src="images/bg.jpg">
-            </div>
-            <textarea spellcheck="false">sample text</textarea>
-            <div class="ops">
-                <i class="fa fa-trash" style="color: #c09268; font-size: 1.1rem"></i>
-            </div>
-        </div>
-        <div class="note">
-            <div class="banner">
-                <img src="images/bg.jpg">
-            </div>
-            <textarea spellcheck="false">sample text</textarea>
-            <div class="ops">
-                <i class="fa fa-trash" style="color: #c09268; font-size: 1.1rem"></i>
-            </div>
-        </div>
-    </div>
-    <div class="overlay">
-</div>
-    <div class="popup">
+    <button id="add-btn">Add Note</button>
+    <div id="notes-container"></div>
+    <div id="overlay"></div>
+    <div id="popup">
         <h3>Enter Note</h3>
-        <textarea spellcheck="false"></textarea>
+        <textarea id="inputField" spellcheck="false"></textarea>
         <div class="buttons">
-            <button onclick="Popclose()">Save</button>
-            <button onclick="Popclose()">Close</button>
+            <button id="save">Save</button>
+            <button id="close">Close</button>
         </div>
     </div>
-    <div class="fab" onclick="Popfunc()">
-            <i class="fa fa-plus" style="color: #fef0df; font-size: 23px"></i>
-    </div>
+    <script src="index.js"></script>
 </body>
+
 </html>
