@@ -3,7 +3,6 @@ const overlay = document.getElementById("overlay")
 const addBtn = document.getElementById("add-btn")
 const save = document.getElementById("save")
 const close = document.getElementById("close")
-const deleteBtn = document.getElementById("delete")
 const notesContainer = document.getElementById("notes-container")
 function openPopup() {
     popupBox.style.visibility = "visible"
@@ -43,6 +42,11 @@ close.addEventListener("click", function () {
     closePopup()
 })
 
-notesContainer.addEventListener("click",function (){
-    notesContainer.remove("active");
+notesContainer.addEventListener("click",function (e){
+    if (e.target && e.target.classList.contains("fa-trash")) {
+        const note = e.target.closest(".note");
+        if (note) {
+            note.remove();
+        }
+    }
 })
