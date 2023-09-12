@@ -34,7 +34,7 @@ function addNote(val) {
         <img src="images/bg-cute.png">
     </div>
     <div class="text">
-        <p>${val}</p>
+        <p class=textVal>${val}</p>
     </div>
     <i class="fa fa-trash" id="delete" style="color: #c09268; font-size: 1.1rem"></i>
 </div>`
@@ -59,10 +59,14 @@ close.addEventListener("click", function () {
 notesContainer.addEventListener("click", function (e) {
     if (e.target && e.target.classList.contains("fa-trash")) {
         const note = e.target.closest(".note");
-        const text = document.querySelector(".note .text p").value
         if (note) {
-            localStorage.removeItem("mytime");
-            note.remove(text);
+            const textElement = note.querySelector(".textVal").textContent;
+            const index = notesArray.indexOf(textElement);
+            if (index !== -1) {
+                notesArray.splice(index, 1);
+                localStorage.setItem('items', JSON.stringify(notesArray));
+            }
+            note.remove();
         }
     }
 })
